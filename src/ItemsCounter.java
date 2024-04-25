@@ -7,7 +7,6 @@ public class ItemsCounter {
     private final String path;
     Map<String, Integer> hashMap = new HashMap<>();
 
-
     public ItemsCounter(String path) {
         this.path = path;
     }
@@ -28,14 +27,11 @@ public class ItemsCounter {
     }
 
     public void showItemsNumber() {
-
         String[] arrWords = getStringFromFile(path);
-
         System.out.println("В данном наборе содержится " + arrWords.length + (arrWords.length % 10 < 5 ? " слова." : " слов."));
     }
 
     public void showLongestWords() {
-
         hashMap = getMap(getStringFromFile(path));
         int maxLength = 0;
         List<String> longestWords = new ArrayList<>();
